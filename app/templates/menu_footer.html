@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex flex-column min-vh-100 base-container">
+    <nav class="navbar navbar-expand-lg bg-primary p-1" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CV-Security</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link {{navclass.get('home', '')}}" href={{url_for('home')}}>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{navclass.get('camera', '')}}" href={{url_for('camera')}}>Câmera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{navclass.get('relatorios', '')}}" href={{url_for('relatorios')}}>Relatórios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{navclass.get('sair', '')}}" href={{url_for("user.signout")}}>Sair</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  {% block page_content %}
+
+  {% endblock %}
+    <footer class="text-center text-lg-start bg-white text-muted">
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    </div>
+  </footer>
+</div>
+  {% endblock %}

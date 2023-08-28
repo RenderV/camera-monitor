@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="cardw-wrapper">
+        <div class="cardw">
+            <form name="login_form" method="POST">
+              {{lform.csrf_token}}
+              {%if lform.errors%}
+                <fieldset>
+                  <legend>Entre</legend>
+                  <div class="form-group has-danger">
+                    {{lform.email.label(class_="form-label mt-4")}}
+                    {{lform.email(class_="form-control mb-3 is-invalid", placeholder="exemplo@email.com")}}
+                  </div>
+                  <div class="form-group has-danger">
+                    {{lform.password.label(class_="form-label mt-2")}}
+                    {{lform.password(class_="form-control is-invalid", type="password", placeholder="*"*8)}}
+                    <div class="invalid-feedback pb-0 mb-0">{{lform.errors['password'][0]}}</div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-4">Entrar</button>
+                </fieldset>
+              {%else%}
+                <fieldset>
+                  <legend>Entre</legend>
+                  <div class="form-group">
+                    {{lform.email.label(class_="form-label mt-4")}}
+                    {{lform.email(class_="form-control mb-3", type="email", placeholder="exemplo@email.com")}}
+                  </div>
+                  <div class="form-group">
+                    {{lform.password.label(class_="form-label mt-2")}}
+                    {{lform.password(type="password", class_="form-control", placeholder="*"*8)}}
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-4">Entrar</button>
+                </fieldset>
+              {%endif%}
+          </form>
+          <div class="pt-4">
+            <a href={{url_for("user.signup")}}>Não tem uma conta?</p>
+          </div>
+        </div> 
+    </div> 
+{% endblock %}

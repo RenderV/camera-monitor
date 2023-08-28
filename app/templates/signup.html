@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="cardw-wrapper">
+        <div class="cardw">
+            <form name="singup_form" method="POST">
+                {{sform.csrf_token}}
+                <fieldset>
+                  <legend>Cadastre-se</legend>
+                  <div class="form-group">
+                    {{sform.name.label(class_="form-label mt-4")}}
+                    {{sform.name(class_="form-control", placeholder="João da Silva")}}
+                  </div>
+                  {%if sform.errors.get('email')%}
+                      <div class="form-group has-danger">
+                        {{sform.email.label(class_="form-label mt-4")}}
+                        {{sform.email(class_="form-control is-invalid", type="email", placeholder="exemplo@email.com")}}
+                        <div class="invalid-feedback">{{ sform.errors['email'][0] }}</div>
+                      </div>
+                  {%else%}
+                      <div class="form-group">
+                        {{sform.email.label(class_="form-label mt-4")}}
+                        {{sform.email(class_="form-control", type="email", placeholder="exemplo@email.com")}}
+                      </div>
+                  {%endif%}
+                  <div class="form-group">
+                    {{sform.password.label(class_="form-label mt-4")}}
+                    {{sform.password(class_="form-control mb-3", placeholder="*"*8)}}
+                  </div>
+                  <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </fieldset>
+          </form>
+          <div class="pt-4">
+            <a href={{url_for("user.signin")}}>Realizar Log-In em vez disso</p>
+          </div>
+        </div> 
+        </div> 
+    </div> 
+{% endblock %}

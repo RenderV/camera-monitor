@@ -1,0 +1,86 @@
+{%extends "menu_footer.html"%}
+
+{% block scripts %}
+    <script src="/static/js/relatorios.js"></script>
+{% endblock %}
+
+{%block page_content%}
+  <div id='modal' class="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ATENÇÃO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-justify text-break"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal_delete">Deletar</button>
+          <button type="button" class="btn btn-secondary modal_cancel" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4" sytle="width: 300px;">
+    <table class="table table-hover mx-auto pt-3" style="width: 65%; box-shadow: 0 8px 26px -4px rgba(79, 71, 71, 0.15); text-align: center;">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Local</th>
+            <th scope="col">Image_URL</th>
+          </tr>
+        </thead>
+        {% for i in range(n_rows) %}
+            {% if i%2==0 %}
+            <tr class="table-primary rlist" id="{{images[i]}}">
+            {% else %}
+            <tr class="table-default rlist" id="{{images[i]}}">
+            {% endif %}
+            <th scope="row" class="table_date">{{dates[i]}}</th>
+            <td>{{locals[i]}}</td>
+            <td>{{images[i]}}</td>
+            {%if session['user']['is_admin']%}
+            <td><button class="invisible btn float-left"><i class="delete_item bi bi-trash"></i></button></td>
+            {%endif%}
+            </tr>
+        {% endfor %}
+      </table>
+      {%if session['user']['is_admin']%}
+      <div class="mb-3" style="display: flex; justify-content: center; font-size: 15px;">
+        <button class="btn" id="delete_all">
+          <i class="bi bi-folder-x"> APAGAR TUDO</i>
+        </button>
+      </div>
+      {%endif%}
+      <div class="mx-auto" style="display: flex; justify-content: center; font-size: 15px;">
+       <ul class="pagination">
+         {% if current_page == 1 %}
+          <li class="page-item disabled">
+         {% else %}
+          <li class="page-item">
+         {% endif %}
+            <a class="page-link" href={{url_for("relatorios", page=1)}}>&laquo;</a>
+          </li>
+          {% for i in range(n_indexes) %}
+            {% if pages[i] == current_page %}
+            <li class="page-item active">
+            {% else %}
+            <li class="page-item">
+            {% endif %}
+            <a class="page-link" href={{url_for("relatorios", page=pages[i])}}>{{pages[i]}}</a>
+            </li>
+          {% endfor %}
+          {% if current_page == total_pages %}
+          <li class="page-item disabled">
+          {% else %}
+          <li class="page-item">
+          {% endif %}
+            <a class="page-link" href={{url_for("relatorios", page=total_pages)}}>&raquo;</a>
+          </li>
+        </ul>
+        </div>
+</div>
+{%endblock%}

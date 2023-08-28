@@ -1,0 +1,21 @@
+{% extends "menu_footer.html" %}
+
+{% block scripts %}
+    <script src="/static/js/home.js"></script>
+{% endblock %}
+
+{% block page_content %}
+    <div class="card mx-auto mt-4 report--card mb-4" style="min-width: 200px; max-width: 1000px; width: 80%;">
+        <div class="card-header"><a class="report--link" href="#">ÚLTIMA ENTRADA | Atualização em tempo real</a></div>
+        <div class="card-body">
+          <h4 id="report-data" class="card-title">detecção em</h4>
+          <ul>
+            <li id="report-local">Local:</li>
+            <li id="report-hora">Hora:</li>
+          </ul>
+        <div class="flex mx-auto" style="width: 80%">
+          <img id="report-img" class="img-fluid" style="max-width: 100%;">
+        </div>
+        </div>
+    </div>
+{%endblock%}

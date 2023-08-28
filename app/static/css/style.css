@@ -1,0 +1,105 @@
+/* Cards */
+.cardw-wrapper {
+  margin: 0;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.cardw {
+  margin: 30px 10px 60px;
+  padding: 20px 40px;
+  width: 460px;
+  box-shadow: 0 8px 26px -4px rgba(79, 71, 71, 0.15);
+}
+
+@media only screen and (max-width: 520px) {
+  .cardw-wrapper {
+    padding: 30px 0 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .cardw {
+    margin: 0 0 30px;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+
+.report--card{
+  box-shadow: 0 8px 26px -4px rgba(79, 71, 71, 0.15);
+}
+
+.report--link{
+  text-decoration: none;
+}
+
+.base-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
+}
+
+#chartContainer{
+  /* height: 100%; */
+  height: 70vh;
+  /* width: 100%; */
+  /* max-width: 700px; */
+}
+
+#svgc {
+  width: 900px;
+  height: 620px;
+  background-size: 900px;
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+}
+
+.rec {
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard-graph{
+  width: 40vw;
+  max-width: 1000px; 
+}
+
+/* Apply the hover effect to the <g> elements inside the SVG */
+#chartContainer svg g:hover {
+  filter: brightness(0.8); /* Reduce brightness to 80% on hover */
+}
+
+.date-sel{
+  transform: translate(0, -7vw);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(-3vw);
+  }
+  50% {
+    transform: translateY(-3.3vw);
+  }
+  100% {
+    transform: translateY(-3vw);
+  }
+}
+
+.dashboard-graph{
+    transform: translateY(-3vw);
+}
+
+.dashboard-graph {
+  animation: floating 2s infinite ease-in-out;
+}
