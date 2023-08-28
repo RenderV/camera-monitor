@@ -8,12 +8,12 @@ This project was made to practice flask. It is a footprint of another project th
 
 ## Images
 
-![image](https://github.com/RenderV/camera-monitor/assets/92237089/f8c9a9c2-333c-4faf-a4f3-d66f67e7e325)
-![image](https://github.com/RenderV/camera-monitor/assets/92237089/7cb6b8d2-a6ee-4a07-bada-601a12b4c9a3)
-![image](https://github.com/RenderV/camera-monitor/assets/92237089/c0f5a222-5635-4ef7-b195-8b985fd0e97f)
-![image](https://github.com/RenderV/camera-monitor/assets/92237089/4c3bb30b-922a-4f17-bffb-77da335326a8)
-![image](https://github.com/RenderV/camera-monitor/assets/92237089/eae47bac-762c-4935-a44d-18c7b70c79ac)
-![image](https://github.com/RenderV/camera-monitor/assets/92237089/e45fe47d-464c-4adb-9522-d89885526a8b)
+![Screenshot from 2023-08-27 23-18-13](https://github.com/RenderV/camera-monitor/assets/92237089/31c19c60-82e1-45b6-94dd-57f273cfcf67)
+![Screenshot from 2023-08-27 23-19-08](https://github.com/RenderV/camera-monitor/assets/92237089/614c0bb5-a8c3-416f-87d5-4f7593ea9e74)
+![Screenshot from 2023-08-27 23-19-23](https://github.com/RenderV/camera-monitor/assets/92237089/ad9ca32e-518a-4115-a592-019f6b75b527)
+![Screenshot from 2023-08-27 23-19-35](https://github.com/RenderV/camera-monitor/assets/92237089/c7e254e8-ea8c-4d6c-a026-03a87c58bd50)
+![Screenshot from 2023-08-27 23-28-48](https://github.com/RenderV/camera-monitor/assets/92237089/e7bd90a3-53dd-4eae-9554-768966a42acc)
+![Screenshot from 2023-08-27 23-31-37](https://github.com/RenderV/camera-monitor/assets/92237089/10804703-6aac-4ffa-8625-fa5312a99ade)
 
 
 ## Usage
