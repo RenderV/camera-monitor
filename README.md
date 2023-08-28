@@ -2,6 +2,10 @@
 
 This project was made to practice flask. It is a footprint of another project that is currently in development with Django, PostgresSQL, and Next.js.
 
+It's a camera monitoring system designed to be complemented with a object detection model. When a new detection is added to the database, the user is notified. It's possible to remove register and select an area of interest where the model will perform its detection.
+
+Please note that this repository solely contains the user interface and routing logic.
+
 #### Table of contents
   * [Images](#images)
   * [Usage](#usage)
@@ -17,8 +21,6 @@ This project was made to practice flask. It is a footprint of another project th
 
 
 ## Usage
-
-This repository only contains the user interface and backend logic.
 
 To use the application, follow these instructions:
 1. Install the project dependencies with `pip install -r requirements.txt`.
