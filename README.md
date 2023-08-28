@@ -2,9 +2,9 @@
 
 This project was made to practice flask. It is a footprint of another project that is currently in development with Django, PostgresSQL, and Next.js.
 
-It's a camera monitoring system designed to be complemented with a object detection model. When a new detection is added to the database, the user is notified. It's possible to remove register and select an area of interest where the model will perform its detection.
+It's a camera monitoring system designed to complement an object detection model. When a new detection is added to the database, the user is notified. On the reports page, you can remove and visualize previous records, and on the camera page, you can select an area of interest where the model will perform its detection.
 
-Please note that this repository solely contains the user interface and routing logic.
+This repository solely contains the user interface and routing logic.
 
 #### Table of contents
   * [Images](#images)
